@@ -1,0 +1,7 @@
+[
+    {
+        "processDefinitionKey": "some-test-process",
+        "canInitializeDocument": true,
+        "startableByUser": true
+    }
+]
