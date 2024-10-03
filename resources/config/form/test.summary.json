@@ -1,4 +1,31 @@
 {
   "display" : "form",
-  "components" : [ ]
+  "components" : [ {
+    "label" : "Voornaam",
+    "applyMaskOn" : "change",
+    "tableView" : true,
+    "key" : "voornaam",
+    "type" : "textfield",
+    "input" : true,
+    "attributes" : {
+      "data-testid" : "test.summary-voornaam"
+    }
+  }, {
+    "label" : "Achternaam",
+    "applyMaskOn" : "change",
+    "tableView" : true,
+    "key" : "achternaam",
+    "type" : "textfield",
+    "input" : true,
+    "attributes" : {
+      "data-testid" : "test.summary-achternaam"
+    }
+  }, {
+    "type" : "button",
+    "label" : "Submit",
+    "key" : "submit",
+    "disableOnInvalid" : true,
+    "input" : true,
+    "tableView" : false
+  } ]
 }
