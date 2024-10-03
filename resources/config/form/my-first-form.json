@@ -8,16 +8,26 @@
     "validate" : {
       "maxLength" : 10
     },
+    "tableView" : true,
     "attributes" : {
       "data-testid" : "my-first-form-voornaam"
-    },
-    "tableView" : true
+    }
+  }, {
+    "label" : "Achternaam",
+    "applyMaskOn" : "change",
+    "tableView" : true,
+    "key" : "achternaam",
+    "type" : "textfield",
+    "input" : true,
+    "attributes" : {
+      "data-testid" : "my-first-form-achternaam"
+    }
   }, {
     "key" : "submit",
     "type" : "button",
     "input" : true,
     "label" : "Submit",
-    "disableOnInvalid" : true,
-    "tableView" : false
+    "tableView" : false,
+    "disableOnInvalid" : true
   } ]
 }
