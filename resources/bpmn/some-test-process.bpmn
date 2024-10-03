@@ -6,13 +6,18 @@
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="Flow_0kmjx3x" sourceRef="StartEvent_1" targetRef="Activity_09bnhy1" />
     <bpmn:endEvent id="Event_0bfized">
-      <bpmn:incoming>Flow_0cbysai</bpmn:incoming>
+      <bpmn:incoming>Flow_0c2jjs3</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_0cbysai" sourceRef="Activity_09bnhy1" targetRef="Event_0bfized" />
+    <bpmn:sequenceFlow id="Flow_0cbysai" sourceRef="Activity_09bnhy1" targetRef="Activity_0qs58n5" />
     <bpmn:userTask id="Activity_09bnhy1" name="Do a thing" camunda:candidateGroups="ROLE_USER">
       <bpmn:incoming>Flow_0kmjx3x</bpmn:incoming>
       <bpmn:outgoing>Flow_0cbysai</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0c2jjs3" sourceRef="Activity_0qs58n5" targetRef="Event_0bfized" />
+    <bpmn:serviceTask id="Activity_0qs58n5" name="Log a line" camunda:delegateExpression="${myProcessBean.doThing(execution)}">
+      <bpmn:incoming>Flow_0cbysai</bpmn:incoming>
+      <bpmn:outgoing>Flow_0c2jjs3</bpmn:outgoing>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="some-test-process">
@@ -24,7 +29,10 @@
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0bfized_di" bpmnElement="Event_0bfized">
-        <dc:Bounds x="422" y="99" width="36" height="36" />
+        <dc:Bounds x="552" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1v14odf_di" bpmnElement="Activity_0qs58n5">
+        <dc:Bounds x="410" y="77" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0kmjx3x_di" bpmnElement="Flow_0kmjx3x">
         <di:waypoint x="215" y="117" />
@@ -32,7 +40,11 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0cbysai_di" bpmnElement="Flow_0cbysai">
         <di:waypoint x="370" y="117" />
-        <di:waypoint x="422" y="117" />
+        <di:waypoint x="410" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0c2jjs3_di" bpmnElement="Flow_0c2jjs3">
+        <di:waypoint x="510" y="117" />
+        <di:waypoint x="552" y="117" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
