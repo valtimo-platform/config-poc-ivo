@@ -13,6 +13,16 @@
       "data-testid" : "my-first-form-voornaam"
     }
   }, {
+    "label" : "Achternaam",
+    "applyMaskOn" : "change",
+    "tableView" : true,
+    "key" : "achternaam",
+    "type" : "textfield",
+    "input" : true,
+    "attributes" : {
+      "data-testid" : "my-first-form-achternaam"
+    }
+  }, {
     "key" : "submit",
     "type" : "button",
     "input" : true,
